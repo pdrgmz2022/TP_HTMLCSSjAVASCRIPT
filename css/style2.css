@@ -1,0 +1,43 @@
+.textoceleste{
+    color: aqua;
+    text-align: end;
+}
+.fondo{
+    background-image: url(/img/hawaii.jpg);
+    width:100%;
+}
+ul li{
+    text-decoration: none;
+    display:inline;
+    text-align: end;
+    justify-content: end;
+}
+img{
+    margin: 0;
+    padding: 0;
+}
+.titulo{
+    text-align:right ;
+    justify-content: center;
+    color: coral;
+    font-size:180%;
+    align-items: center;
+}
+
+.footer {
+    background-color:black;
+    padding: 20px 0;
+    color: cyan;
+  }
+  
+  .footer i {
+    font-size: 24px;
+    margin-right: 10px;
+    color: aqua;
+  }
+  .textochico{
+    font-size: .8rem;}
+  
+ .carousel-item{
+    filter: brightness(50%);
+ }

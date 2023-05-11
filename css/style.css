@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.oradores {
+     display: flex; 
+     flex-direction: row; 
+     justify-content: center;
+} 
+ 
+@media only screen and (max-width:675px) {
+    .oradores {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+        
+}
+
+.orador {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    /* width: 50%; */
+    margin: 1rem;
+}
+
+.orador img {
+    width: 100%;
+}
+
+.foto {
+    margin-bottom: 1rem;
+}
+
+.desc {
+    margin: 1rem;
+}
+
+.botones {
+    margin: 0 0 1rem 0;
+}
+
+.btnAmarillo {
+    background-color: rgb(254,193,7);
+    padding: .2rem .4rem;
+    border-radius: 5px;
+    font-size: .9rem;
+    font-weight: 600;
+    color: black;
+    margin: 0 .2rem 0 0;
+}
+
+.btnCeleste {
+    background-color: rgb(21,161,186);
+    padding: .2rem .4rem;
+    border-radius: 5px;
+    font-size: .9rem;
+    font-weight: 600;
+    color: white;
+
+}
+.btnGris{
+    background-color: rgb(133, 131, 122);
+    padding: .2rem .4rem;
+    border-radius: 5px;
+    font-size: .9rem;
+    font-weight: 600;
+    color: black;
+    margin: 0 .2rem 0 0;
+}
+
+.btnRojo {
+    background-color: rgb(218, 11, 11);
+    padding: .2rem .4rem;
+    border-radius: 5px;
+    font-size: .9rem;
+    font-weight: 600;
+    color: white;
+
+}
+
+.orador .titulo {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.orador .texto {
+    text-align: justify;
+    line-height: 1.4rem;
+}
+.color_texto{
+    color: rgb(244, 247, 240);
+
+}
+.texto_alineado{
+    text-align: center;
+}
+.altura{
+    height: 80px;
+    background-color: rgb(38, 60,102);
+}
+.altura_header{
+    height: 100px;
+
+}
+.container{
+    overflow: hidden;
+}
+div banner img{
+    filter: brightness(20%);  /* es para bajar el brillo de la imagen principal */
+}
+.carousel-item img{
+    filter: brightness(50%)!important; /* es para bajar el brillo a la imagen del carrousel*/
+}
