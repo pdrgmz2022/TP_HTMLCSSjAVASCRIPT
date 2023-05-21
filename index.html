@@ -19,40 +19,42 @@
 
       <!-- header -->
 
-    <header>
-        <div class="row fixed-top">
-            <div class="col-1 bg-dark">    </div>  <!-- a este div lo coloco para hacer un espacio y abarca 1 columna -->
+      <header class="fixed-top"> <!-- fixed-top es para fijar el header arriba -->
 
-          
-            <div class="col-4 bg-dark text-white ">  <!--coloco al div de 4 columnas, fondo oscuro y texto blanco -->
-                 <a class="navbar-brand " href="#"> 
-                    <img src="./img/codoacodo.png" alt="" width="100px">
-                        <span class="fs-5">Conf BsAs</span> <!--  fs-5  significa un fontsize de 5 -->
-                </a>
-            </div>
+        <div class="row ">
+            
+                    <nav class="navbar navbar-expand-lg bg-dark " data-bs-theme="dark"> <!-- data-bs-theme = "dark" deja el texto en blanco-->
+                        
+                        <div class="col-1"></div>  <!-- a este div lo coloco para hacer un espacio y abarca 1 columna -->
+                        
+                        <div class="container-fluid">
+                            <a class="navbar-brand" href="index.html">
+                                <img src="./img/codoacodo.png" alt="" width="100px">
+                                    <span class="fs-5">Conf BsAs</span> <!--  fs-5  significa un fontsize de 5 -->
+                            </a>
 
-            <div class="col-7 bg-dark  "> <!-- le da 7 columnas al div de fondo oscuro -->
-                <nav class="navbar navbar-expand-lg navbar-white bg-dark" data-bs-theme="dark"> <!-- "navbar-expand-lg" indica que la barra de navegación se expandirá a pantalla completa en dispositivos con una anchura de pantalla grande (más de 992 píxeles).-->
-                    <div class="container-fluid"> <!-- "container-fluid" es una clase de Bootstrap que se utiliza para crear un contenedor que ocupa todo el ancho disponible de la pantalla.-->
-                        <a class="navbar-brand " href="#"></a> 
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                           <!-- "navbar-toggler" es una clase de Bootstrap que se utiliza para agregar un botón de menú desplegable en una barra de navegación-->
-                           <span class="navbar-toggler-icon "></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup ">
-                            <div class="navbar-nav text-white">
-                                <a class="nav-link text-white active" aria-current="page" href="#">La Conferencia</a>
-                                <a class="nav-link text-white opacity-75" href="#oradores">Los Oradores</a>
-                                <a class="nav-link text-white opacity-75" href="#lugar-y-fecha">Lugar y Fecha</a>
-                                <a class="nav-link text-white opacity-75 " href="#form">Conviertete en Orador</a> <!-- #form es el id del sector de oradores-->
-                                <a class="nav-link text-success " href="#comprar">Comprar Tickets</a>
+                            <div class="col-3"></div> <!-- a este div lo coloco para hacer un espacio y abarca 3 columnas -->
+
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                                <div class="navbar-nav">
+                                
+                                    <a class="nav-link text-white active" aria-current="page" href="#">La Conferencia</a>
+                                    <a class="nav-link text-white opacity-75" href="#oradores">Los Oradores</a>
+                                    <a class="nav-link text-white opacity-75" href="#lugar-y-fecha">Lugar y Fecha</a>
+                                    <a class="nav-link text-white opacity-75 " href="#form">Conviertete en Orador</a> <!-- #form es el id del sector de oradores-->
+                                    <a class="nav-link text-success " href="comprartickets.html">Comprar Tickets</a>
+                                                    
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </nav>
-            </div>
+                        
+                    </nav>
 
         </div>
+
     </header>
 
 
@@ -76,7 +78,7 @@
                     <img src="./img/hawaii.jpg" class="d-block w-100 " alt="h1"> <!--img-fluid hace que se adapte al ancho -->
                     <div class="carousel-caption  d-md-block text-md-end text-center mb-5">
         
-                        <div class="row mb-3">
+                        <div class="row ">
                             <div class="col-md-4 col-0 ">
         
                             </div>
@@ -373,14 +375,14 @@
         
                 <div class="row">
                     <div class="col-md mb-3">
-                        <input type="number" name="cantidadentradas" id="cantidadentradas" onkeyup="CalPrecioFinal()"
-                            class="form-control" required placeholder="cantidad de entradas">
+                        <input type="number" name="cantidadentradas" id="cantidadentradas" onchange="CalPrecioFinal()"
+                            class="form-control" required placeholder="cantidad de entradas" min="1" max="15">
                         <!-- cada vez que se ingresa algo en la cantidad de entradas se llama a la funcion CalPrecioFinal() -->
                         <small>Costo de entradas $ 1000</small>
                     </div>
                     <div class="col-md mb-3">
         
-                        <select class="form-select" id="porcDescuento">
+                        <select class="form-select" id="porcDescuento" onchange="CalPrecioFinal()">
                             <!-- <option selected>Open this select menu</option> -->
                             <option value="10">Particular (10% de descuento)</option>
                             <option value="30">Estudiante (30% de descuento)</option>

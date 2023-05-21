@@ -15,11 +15,11 @@ function CalPrecioFinal(){
 
 
     // descuento almacena los pesos totales a descontar
-    let descuento = (cantEnt*1000) * porcDesc/100;
+    let descuento = (cantEnt*200) * porcDesc/100;
          console.log("descuento: " + descuento)
 
 
-    let precioTotal = (cantEnt*1000) - descuento;
+    let precioTotal = (cantEnt*200) - descuento;
     // estoy modificando el html dinamicamente para colocar el precio total en la pantalla
     document.getElementById("valorTotal").value=precioTotal;
 
