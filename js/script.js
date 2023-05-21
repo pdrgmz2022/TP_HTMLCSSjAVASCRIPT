@@ -21,7 +21,7 @@ function CalPrecioFinal(){
 
     let precioTotal = (cantEnt*200) - descuento;
     // estoy modificando el html dinamicamente para colocar el precio total en la pantalla
-    document.getElementById("valorTotal").value=precioTotal;
+    document.getElementById("valorTotal").value=`Total a pagar = ${precioTotal}`;
 
 
 
